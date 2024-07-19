@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isvalid = false;
             messages.push("Username must be at least 3 characters long.");
         } else {
-            messages.push(" ");
+            messages.push("isValid");
         }
 
         if(!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)){
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
             messages.push('Please enter a valid email address.');
             
         }else {
-            messages.push(" ");
+            messages.push("isValid");
         }
 
         if(password.length < 8){
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             messages.push('Password must be at least 6 characters long.');
             
         }else {
-            messages.push(" ");
+            messages.push("isValid");
         }
 
         feedbackDiv.style.display ="block";
