@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (username.length < 3){
             isvalid = false;
             messages.push("Username must be at least 3 characters long.");
-            return;
         } else {
             messages.push(" ");
         }
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)){
             isvalid = false;
             messages.push('Please enter a valid email address.');
-            return;
+            
         }else {
             messages.push(" ");
         }
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(password.length < 8){
             isvalid = false;
             messages.push('Password must be at least 6 characters long.');
-            return;
+            
         }else {
             messages.push(" ");
         }
