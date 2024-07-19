@@ -21,26 +21,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (username.length < 3){
             isvalid = false;
-            messages.textcontent = "Username must be at least 3 characters long.";
+            messages.push("Username must be at least 3 characters long.");
             return;
         } else {
-            messages.textcontent = " ";
+            messages.push(" ");
         }
 
         if(!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)){
             isvalid = false;
-            messages.textcontent = 'Please enter a valid email address.';
+            messages.push('Please enter a valid email address.');
             return;
         }else {
-            messages.textcontent = " ";
+            messages.push(" ");
         }
 
         if(password.length < 8){
             isvalid = false;
-            messages.textcontent = 'Password must be at least 6 characters long.';
+            messages.push('Password must be at least 6 characters long.');
             return;
         }else {
-            messages.textcontent = " ";
+            messages.push(" ");
         }
 
         feedbackDiv.style.display ="block";
