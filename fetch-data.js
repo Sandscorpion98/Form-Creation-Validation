@@ -14,6 +14,7 @@ async function fetchUserData(){
         const users = await response.json();    
 
         dataContainer.innerHTML = '';
+
         const userList = documnet.createElement("ul");
 
         users.forEach((user)=> {
@@ -22,10 +23,10 @@ async function fetchUserData(){
 
             listItem.textcontent = user.name;
             
-            userList.appendchild(listItem);
+            userList.appendChild(listItem);
         })
 
-        dataContainer.appendchild(userList);
+        dataContainer.appendChild(userList);
     } 
 
     catch{
