@@ -15,13 +15,13 @@ async function fetchUserData(){
 
         dataContainer.innerHTML = '';
 
-        const userList = documnet.createElement("ul");
+        const userList = document.createElement("ul");
 
         users.forEach((user)=> {
 
             const listItem = document.createElement("li");
 
-            listItem.textcontent = user.name;
+            listItem.textContent = user.name;
             
             userList.appendChild(listItem);
         })
