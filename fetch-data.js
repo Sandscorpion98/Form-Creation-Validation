@@ -1,6 +1,6 @@
 
 
-document.addEventListener("DOMContentLoaded", fetchUserData());
+document.addEventListener("DOMContentLoaded", fetchUserData);
 
 async function fetchUserData(){
     
@@ -16,17 +16,18 @@ async function fetchUserData(){
         dataContainer.innerHTML = '';
         const userList = documnet.createElement("ul");
 
-        users.forEach(()=> {
+        users.forEach((user)=> {
 
-            const list = document.createElement("li");
+            const listItem = document.createElement("li");
 
-            list.textcontent = users.name;
+            listItem.textcontent = user.name;
             
-            userList.append("li");
+            userList.appendchild(listItem);
         })
 
-        dataContainer.append(userList);
+        dataContainer.appendchild(userList);
     } 
+
     catch{
         
         dataContainer.innerHTML = '';
